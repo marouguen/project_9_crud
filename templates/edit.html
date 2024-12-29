@@ -1,0 +1,42 @@
+{%extends 'base.html'%} {%block content%}
+<h2 class="text-3xl font-bold mb-5">Update Student {{student.name}}</h2>
+<form
+  action="{{url_for('edit', id=student.id)}}"
+  class="space-y-4 bg-white p-6 rounded-lg shadow-lg max-w-md"
+  method="POST"
+>
+  <label class="block bg-gray-100 py-2" for="name">Name:</label>
+  <input
+    type="text"
+    name="name"
+    id="name"
+    class="block w-full mt-1 border bg-gray-200 hover:bg-blue-500 hover:text-white py-2"
+    value="{{student.name}}"
+    required
+  /><br /><br />
+  <label class="block bg-gray-100 py-2" for="age">Age:</label>
+  <input
+    type="number"
+    name="age"
+    id="age"
+    class="block w-full mt-1 border bg-gray-200 hover:bg-blue-500 hover:text-white py-2"
+    value="{{student.age}}"
+    required
+  /><br /><br />
+  <label class="block bg-gray-100 py-2" for="email">Email:</label>
+  <input
+    type="email"
+    name="email"
+    id="email"
+    class="block w-full mt-1 border bg-gray-200 hover:bg-blue-500 hover:text-white py-2"
+    value="{{student.email}}"
+    required
+  /><br /><br />
+  <button
+    type="submit"
+    class="bg-green-500 text-white hover:bg-green-600 px-4 py-2 rounded-md"
+  >
+    Update Student
+  </button>
+</form>
+{%endblock%}
