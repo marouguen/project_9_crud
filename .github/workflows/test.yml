@@ -53,4 +53,4 @@ jobs:
         with:
           context: .
           push: true
-          tags: your-dockerhub-username/your-image-name:latest
+          tags: marouguen/project_9_crud:latest
